@@ -23,7 +23,7 @@ public class Phrases {
     private static List wordsSequancelist = new ArrayList<>();
     private static List topSequances = new ArrayList<>();
     private static Map<String, Integer> occuranceSequanceMap = new HashMap<>();
-    private Integer top = 10;
+    private Integer top = 100;
     private static final List fileNames = new ArrayList<>();
     private static final String FILE_NAME = "/Users/Downloads/newRelic.txt";
 
