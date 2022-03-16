@@ -1,0 +1,2 @@
+com/newrelic/assign/Phrases.java
+ com.newrelic.assign.Phrases

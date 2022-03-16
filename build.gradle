@@ -1,0 +1,37 @@
+apply plugin: 'java'
+apply plugin: 'jacoco'
+apply plugin: 'application'
+
+
+mainClassName = 'com.newrelic.assign.Phrases'
+
+dependencies {
+    testImplementation     'junit:junit:4.13'
+}
+
+repositories {
+    mavenCentral()
+}
+
+configurations {
+    compileOnly {
+        extendsFrom annotationProcessor
+    }
+}
+configurations {
+    all {
+        exclude group: 'org.springframework.boot', module: 'spring-boot-starter-logging'
+    }
+}
+configurations.all { 
+    exclude group: 'org.apache.logging.log4j'
+
+}
+
+dependencies {
+  
+    compile('org.springframework.boot:spring-boot-starter-web:2.3.4.RELEASE')
+    implementation 'org.slf4j:slf4j-simple:1.7.21'
+    testImplementation('org.springframework.boot:spring-boot-starter-test:2.3.4.RELEASE') 
+    testImplementation     'junit:junit:4.13'
+}
