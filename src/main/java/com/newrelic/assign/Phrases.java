@@ -119,8 +119,6 @@ public class Phrases {
         List<String> sequancelist = new ArrayList<String>();
         for (int i = 0; i < words.size(); i++) {
             if (((i + 2) < words.size())) {
-                //  System.out.println("######### sequancelist: " + (i + 2));
-
                 sequancelist.add(words.get(i) + " " + words.get(i + 1) + " " + words.get(i + 2));
             }
         }
@@ -141,7 +139,6 @@ public class Phrases {
             occuranceSequanceMap.put(s, occuranceSequanceMap.getOrDefault(s, 0) + 1);
         }
 
-        // System.out.println("###### topSeq: " + occuranceSequanceMap);
         List<String> topSequances = new ArrayList(occuranceSequanceMap.keySet());
         try {
             Collections.sort(topSequances, (w1, w2) -> !Objects.equals(occuranceSequanceMap.get(w1), occuranceSequanceMap.get(w2))
